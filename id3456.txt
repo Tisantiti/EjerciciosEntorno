@@ -1,0 +1,6 @@
+ID: id3456
+Nombre: Manuel Lora
+DNI: 34534523B
+MÓVIL: 678567465
+NACIONALIDAD: italiano
+MEDIA :98.3925
