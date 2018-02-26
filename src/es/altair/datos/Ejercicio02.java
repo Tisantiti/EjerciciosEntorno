@@ -21,12 +21,13 @@ public class Ejercicio02 {
 		
 		if(fich.exists()) {
 			leeFichero(fich);
+			System.out.println("Se han creado los txt con los registros de cada fila del fichero: "
+					+ nombre);
 		}else {
 			System.out.println("No existe");
 		}
 		
-		System.out.println("Se han creado los txt con los registros de cada fila del fichero: "
-				+ nombre);
+		
 		
 		sc.close();
 	}
@@ -62,7 +63,7 @@ public class Ejercicio02 {
 		File fich2 = new File(tabla[0]+".txt");
 		FileWriter fw = null;
 		BufferedWriter bw = null;
-		double media = 0;
+		float media = 0;
 		int num = 0;
 		try {
 			fw = new FileWriter(fich2);
@@ -79,7 +80,7 @@ public class Ejercicio02 {
 			bw.write("NACIONALIDAD: " + tabla[4]);
 			
 			for (int i = 5; i < tabla.length; i++) {
-				media += Double.parseDouble(tabla[i]);
+				media += Float.parseFloat(tabla[i]);
 				num++;
 			}
 			media = media / num;
