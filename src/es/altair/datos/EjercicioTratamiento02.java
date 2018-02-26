@@ -45,23 +45,16 @@ public class EjercicioTratamiento02 {
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
+		// Para calcular la palabra escondida basta con usar .indexOf
+		// si encuentra la palabra guarda la posición de la primera ocurrencia
+		// de la palabra
 		System.out.println(texto);
-		if(texto.contains(palabra)) {
-			String [] tabla = texto.split(" ");
-			for (int i = 0; i < tabla.length; i++) {
-				if(!tabla[i].contains(palabra)) {
-				for (int j = 0; j < tabla[i].length(); j++) {
-					caracteres ++;
-				}
-				} else {
-					break;
-				}
-			}
-			System.out.println("Hay " + caracteres );
-		}
-		else {
-			System.out.println("No se encuentra");
-		}
+		caracteres = texto.indexOf(palabra);
+		// si es -1 es que no la ha encontrado
+		if(caracteres != -1)
+			System.out.println("Palabra "+ palabra +" encontrada escondida entre los "+ caracteres + " primeros caracteres del texto.");
+		else
+			System.out.println("No hemos encontrado la palabra : "+ palabra);
 		
 		
 		
